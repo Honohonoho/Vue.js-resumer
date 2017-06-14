@@ -1,8 +1,12 @@
 <template>
-  <div id="app">
-    <Topbar/>
-    <ResumeEditor/>
-    <ResumePreview/>
+  <div class="page">
+    <header>
+      <Topbar/>
+    </header> 
+    <main>
+      <ResumeEditor/>
+      <ResumePreview/>
+    </main>
   </div>
 </template>
 
@@ -26,5 +30,27 @@ export default {
 </script>
 
 <style>
-
+  .page{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  .page > main{
+    flex-grow: 1;
+  }
+  .page > main{
+    min-width: 1024px;
+    max-width: 1440px;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+  }
+   #resumeEditor{
+     width: 33%;
+     background: #444;
+   }
+   #resumePreview{
+     width: 61.66667%;
+     background: #777; 
+   }
 </style>
