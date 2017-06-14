@@ -42,9 +42,12 @@ export default {
   .page > main{
     min-width: 1024px;
     max-width: 1440px;
-    margin: 16px auto;
+    margin-top: 16px;
+    margin-bottom: 16px;
     display: flex;
     justify-content: space-around;
+    align-self: center;
+    width: 100%;
   }
    #resumeEditor{
      width: 33%;
