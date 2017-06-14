@@ -22,6 +22,7 @@ export default {
     max-width: 1440px;
     margin: 0 auto;
     height: 64px;
+    padding: 0 16px;
     display: flex;
     justify-content: space-between;
     align-items: center;
