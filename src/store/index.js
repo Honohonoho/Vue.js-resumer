@@ -8,24 +8,31 @@ export default new Vuex.Store({
       resume: {
         config: [
           {'field': 'profile',icon: 'id'},
-          {'field': 'work history',icon: 'work'},
+          {'field': 'workHistory',icon: 'work'},
           {'field': 'education',icon: 'book'},
           {'field': 'projects',icon: 'heart'},
           {'field': 'awards',icon: 'cup'},
           {'field': 'contacts',icon: 'phone'},
         ],
         profile: {
-          name: '',
-          city: '',
-          title: ''
+          name: '李某',
+          city: '西安',
+          title: '前端新人',
+          birthday: '1993-01-01'
         },
-        'work history': [
-          {company: 'AL', content: '我的第二份工作是'},
-          {company: 'TX', content: '我的第一份工作是'},
+        'workHistory': [
+          {company: 'B公司', content: `公司总部设在XXXX区，先后在北京、上海成立分公司。专注于移动XXX领域，主打产品XXXXX，它将资讯、报纸、杂志、图片、微信等众多内容，按照用户意愿聚合到一起，实现深度个性化 定制。
+            我的主要工作如下:
+            1. 完成既定产品需求。
+            2. 修复 bug。`},
+          {company: 'A公司', content: '公司总部设在XXXX区，先后在北京、上海成立分公司。专注于移动XXX领域，主打产品XXXXX，它将资讯、报纸、杂志、图片、微信等众多内容，按照用户意愿聚合到一起，实现深度个性化 定制。
+            我的主要工作如下:
+            1. 完成既定产品需求。
+            2. 修复 bug。'},
         ],
         education: [
-          {school: 'AL',content: '文字'},
-          {school: 'TX',content: '文字'},
+          {school: '某大学',content: '硕士'},
+          {school: '某大学',content: '本科'},
         ],
         projects: [
           {name: 'project A',content: '文字'},
