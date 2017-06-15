@@ -55,12 +55,12 @@
 
     <section data-name="contacts" v-show="resume.contacts">
       <h2>联系方式</h2>
-      <ol>
-        <li v-for="item in resume.contacts">
-          <h3>{{item.contacts}}</h3>
-          <p v-show="item.content">{{item.content}}</p>
-        </li>
-      </ol>
+      <table>
+        <tr v-for="item in resume.contacts">
+          <td>{{item.contact}}</td>
+          <td v-show="item.content">{{item.content}}</td>
+        </tr>
+      </table>
     </section>
   </div>
 </template>
@@ -95,8 +95,19 @@ export default {
     ol{
       list-style: none;
     }
+    section + section{
+      margin-top: 2em;
+    }
     p{
       white-space: pre-line;
+    }
+    section{
+      >h2:first-child{
+        background: #ddd;
+        display: inline-block;
+        padding: .2em;
+        margin-bottom: .5em;
+      }
     }
     section[data-name="profile"]{
       >h1{
