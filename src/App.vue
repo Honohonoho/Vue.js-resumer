@@ -27,7 +27,7 @@ export default {
     }
   },
   components: {Topbar, ResumeEditor, ResumePreview},
-  create(){
+  created(){
     document.body.insertAdjacentHTML('afterbegin',icons)
   }
 }
