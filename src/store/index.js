@@ -4,7 +4,6 @@ import Vue from 'vue'
 Vue.use(Vuex)
 export default new Vuex.Store({
     state: {
-      count: 0,
       selected: 'profile',
       resume: {
         config: [
@@ -43,9 +42,6 @@ export default new Vuex.Store({
       }
     },
     mutations: {
-        increment (state) {
-            state.count++
-        },
         switchTab(state,payload){
           state.selected = payload
         }
