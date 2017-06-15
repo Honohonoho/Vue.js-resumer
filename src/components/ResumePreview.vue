@@ -1,12 +1,17 @@
 <template>
   <div id="resumePreview">
-    I am resumePreview
+    {{resume}}
   </div>
 </template>
 
 <script>
 export default {
-  name: 'resumePreview'  
+  name: 'resumePreview',
+  computed: {
+    resume(){
+      return this.$store.state.resume
+    }
+  }
 }
 </script>
 

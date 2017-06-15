@@ -50,7 +50,7 @@ export default {
     }
   }
   #resumeEditor{
-    width: 35%;
+    min-width: 35%;
     background: #444;
   }
   #resumePreview{

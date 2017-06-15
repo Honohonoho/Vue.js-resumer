@@ -35,7 +35,6 @@
 <script>
 export default {
   name: 'ResumeEditor',
-
   computed: {
     selected: {
       get(){
