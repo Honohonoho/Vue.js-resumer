@@ -103,7 +103,7 @@ export default {
       color: #fff;
     }
   }
-  .action{
+  .actions{
     display: flex;
     .userActions{
       margin-right: 3em;

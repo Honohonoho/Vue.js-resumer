@@ -66,10 +66,10 @@ export default new Vuex.Store({
         localStorage.setItem('state', JSON.stringify(state))
       },
       setUser(state, payload){
-        Object.assign(state.user, payload)
+        Object.assign(state.user, payload) // Object.assign()向已有对象上添加属性,添加到对象上的新属性不会触发更新
       },
       removeUser(state){
-        state.user.id = null
+        state.user.id = ''
       }
 
     }
