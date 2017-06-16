@@ -18,7 +18,7 @@
           <div class="subitem" v-for="subitem in resume[item.field]">
             <div class="resumeField" v-for="(value,key) in subitem">
               <label>{{key}}</label>
-              <input type="text" :value="value" @input="subitem[key] = $event.target.value">
+              <input type="text" :value="value" @input="changeResumeField(item.field, key, $event.target.value)">
             </div>
             <hr>
           </div>
@@ -49,6 +49,13 @@ export default {
     }
   },
   methods: {
+    changeResumeField(field, subfield, value){
+      this.$store.commit('updateResume',{
+        field,
+        subfield,
+        value
+      })
+    }
   }
 }
 </script>
