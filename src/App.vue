@@ -21,6 +21,8 @@ import ResumeEditor from './components/ResumeEditor'
 import ResumePreview from './components/resumePreview'
 import icons from './assets/icons'
 import store from './store/index'
+import AV from './lib/leancloud'
+import getAVUser from './lib/getAVUser'
 
 export default {
   name: 'app',
@@ -33,6 +35,7 @@ export default {
       state = JSON.parse(state)
     }
     this.$store.commit('initState', state)
+    this.$store.commit('setUser',getAVUser())
   }
 }
 </script>
