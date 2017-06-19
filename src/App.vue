@@ -32,9 +32,9 @@ export default {
     document.body.insertAdjacentHTML('afterbegin',icons)
     let state = localStorage.getItem('state')
     if(state){
-      // state = JSON.parse(state)  暂时注释掉
+      state = JSON.parse(state)
     }
-    this.$store.commit('initState', state)
+    this.$store.commit('initState', {}) // 先临时清空 一下
     this.$store.commit('setUser',getAVUser())
   }
 }
