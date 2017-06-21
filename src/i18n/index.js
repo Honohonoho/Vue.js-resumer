@@ -4,7 +4,7 @@ export default {
       profile: {
         name: 'Name',
         city: 'City',
-        title: 'Jpb Titlte',
+        title: 'Job Titlte',
         birthday: 'Birthday'
       }
     }

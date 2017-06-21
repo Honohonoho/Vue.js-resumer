@@ -8,7 +8,7 @@ import i18n from './i18n'
 
 var locales = i18n
 Vue.use(VueI18n)
-Vue.config.lang = 'zh_ZN'
+Vue.config.lang = 'zh_CN'
 
 Object.keys(locales).forEach(function(lang){
   Vue.locale(lang, locales[lang])
