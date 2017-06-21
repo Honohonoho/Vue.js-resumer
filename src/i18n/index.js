@@ -18,13 +18,13 @@ export default {
         birthday: '生日'
       },
       workHistory: {
-        _: '教育经历',
-        school: '毕业院校',
+        _: '工作经历',
+        company: '工作单位',
         details: '详情'
       },
       education: {
-        _: '工作经历',
-        company: '工作单位',
+        _: '教育经历',
+        school: '毕业院校',
         details: '详情'
       },
       projects: {
