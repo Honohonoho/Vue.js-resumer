@@ -39,15 +39,16 @@ export default new Vuex.Store({
           })
         }
       })
-      Object.assign(state, payload)
+      if(payload){
+        Object.assign(state, payload)
+      }
     },
     switchTab(state,payload){
       state.selected = payload
-      localStorage.setItem('state', JSON.stringify(state))
     },
     updateResume(state, {path, value}){
       objectPath.set(state.resume, path, value)
-      localStorage.setItem('state', JSON.stringify(state))
+      localStorage.setItem('resume', JSON.stringify(state.resume))
     },
     setUser(state, payload){
       Object.assign(state.user, payload) // Object.assign()向已有对象上添加属性,添加到对象上的新属性不会触发更新
@@ -109,7 +110,9 @@ export default new Vuex.Store({
       var query = new AV.Query('Resume');
       query.equalTo('owner_id', getAVUser().id)
       query.first().then((resume) =>{
-        commit('setResume', {id: resume.id, ...resume.attributes})
+        if(resume){
+          commit('setResume', {id: resume.id, ...resume.attributes})
+        }
       })
     }
   }
