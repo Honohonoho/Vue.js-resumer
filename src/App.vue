@@ -75,4 +75,25 @@ export default {
     vertical-align: -0.1em;
     font-size: 16px;
   }
+  .button{
+    width: 72px;
+    height: 32px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    background: #ddd;
+    color: #222;
+    text-decoration: none;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+    &:hover{
+      box-shadow: 1px 1px 1px hsla(0,0,0,0.50)
+    }
+    &.primary{
+      background: #02af5f;
+      color: #fff;
+    }
+  }
 </style>
