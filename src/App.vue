@@ -34,7 +34,7 @@ export default {
     if(state){
       state = JSON.parse(state)
     }
-    this.$store.commit('initState', {}) // 先临时清空 一下
+    this.$store.commit('initState', state)
     this.$store.commit('setUser',getAVUser())
   }
 }
