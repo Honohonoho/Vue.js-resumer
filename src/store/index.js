@@ -18,6 +18,9 @@ export default new Vuex.Store({
         {'field': 'awards',icon: 'cup',type: 'array',keys: ['name','details']},
         {'field': 'contacts',icon: 'phone',type: 'array',keys: ['contact','details']},
       ],
+      resume: {
+
+      }
     },
     mutations: {
       initState(state, payload){
@@ -49,7 +52,13 @@ export default new Vuex.Store({
       },
       removeUser(state){
         state.user.id = ''
+      },
+      addResumeSubfield(state, {field}){
+        let empty = {}
+        state.resume[field].push(empty)
+        state.resumeConfig.filter((i)=>i.field === field)[0].keys.map((key)=>{
+          Vue.set(empty, key, '')
+        })
       }
-
     }
 })
